@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 
+
 root = Tk()
 root.title("Authentication")
 root.config(bg="#e76f51")
@@ -38,7 +39,8 @@ class Authentication:
 
             elif name in self.user_pass:
                 if pw == self.user_pass[name]:
-                    messagebox.showinfo(message="Success")
+                    root.destroy()
+                    import window
                 else:
                     messagebox.showerror(message="Password incorrect")
             else:
