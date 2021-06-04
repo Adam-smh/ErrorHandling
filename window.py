@@ -26,7 +26,7 @@ class EH:
             if int(self.input.get()) == "":
                 messagebox.showerror("Error", message="Enter appropriate amount")
             else:
-                if int(self.input.get()) >= 3000:
+                if int(self.input.get()) < 3000:
                     messagebox.showerror("Error", message="Insufficiant funds")
                 else:
                     messagebox.showinfo("Congrats", message="You Qualify!")
